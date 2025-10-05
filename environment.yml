@@ -1,0 +1,19 @@
+# environment.yml
+name: toy-controller  # 环境名称，可以随便改
+
+channels:
+  - conda-forge  # 首选的频道，包更丰富
+
+dependencies:
+  - python=3.10   # 指定Python版本
+  - pip=23.0      # 确保pip版本
+  - numpy         # 数值计算核心
+  - requests      # 用于HTTP请求，调用AI API
+  - librosa       # （可选，未来做音频分析时用）音频处理库
+  - scikit-learn  # （可选，未来做简单ML分类时用）机器学习库
+
+  - pip:          # 以下是需要用pip安装的包
+    - opencv-python  # 计算机视觉库，用于图像识别（方案一）
+    - bleak          # （可选，未来逆向蓝牙时用）跨平台蓝牙库
+    - flask          # （可选，未来做电脑端服务时用）轻量级Web框架
+    - pyserial       # （可选，未来连接神秘硬件时用）串口通信
